@@ -1,0 +1,66 @@
+local ScreenGui = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local Icon = Instance.new("ImageLabel")
+	local alractive = Instance.new("TextLabel")
+	local Act = Instance.new("TextButton")
+	local UICorner_2 = Instance.new("UICorner")
+
+	--Properties:
+
+	ScreenGui.Parent = game.CoreGui
+
+	Main.Name = "Main"
+	Main.Parent = ScreenGui
+	Main.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+	Main.Position = UDim2.new(0.404936612, 0, 0.340107322, 0)
+	Main.Size = UDim2.new(0.18965517, 0, 0.317484677, 0)
+	Main.Active = true
+	Main.Draggable = true
+
+	UICorner.CornerRadius = UDim.new(0, 3)
+	UICorner.Parent = Main
+
+	Icon.Name = "Icon"
+	Icon.Parent = Main
+	Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Icon.BackgroundTransparency = 1.000
+	Icon.Position = UDim2.new(0.074522987, 0, 0, 0)
+	Icon.Size = UDim2.new(0.856410265, 0, 0.816425145, 0)
+	Icon.Image = "http://www.roblox.com/asset/?id=11818767262"
+
+	alractive.Name = "alractive"
+	alractive.Parent = Main
+	alractive.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	alractive.BackgroundTransparency = 1.000
+	alractive.Position = UDim2.new(0.0642665774, 0, 0.724948764, 0)
+	alractive.Size = UDim2.new(0.86153847, 0, 0.178743958, 0)
+	alractive.Font = Enum.Font.SourceSans
+	alractive.Text = "Anti-Lock Activated"
+	alractive.TextColor3 = Color3.fromRGB(109, 109, 109)
+	alractive.TextSize = 14.000
+
+	Act.Name = "Act"
+	Act.Parent = Main
+	Act.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	Act.Position = UDim2.new(0.0642665848, 0, 0.724948823, 0)
+	Act.Size = UDim2.new(0.866666675, 0, 0.183574885, 0)
+	Act.Font = Enum.Font.Creepster
+	Act.Text = "Activate Anti-Lock"
+	Act.TextColor3 = Color3.fromRGB(69, 255, 2)
+	Act.TextScaled = true
+	Act.TextSize = 52.000
+	Act.TextWrapped = true
+	Act.MouseButton1Down:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Anti-Lock Activated."; --must be string
+			Text = "Thanks for using LA Anti-lock!, Join our discord too https://discord.gg/pVBVYFsF"; --must be string
+			Icon = "http://www.roblox.com/asset/?id=11818767262"; --optional
+			Duration = 5; -- defaults to 5 secs if no duration is set
+			Button1 = "Ight";
+		})
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/chrsschrs/antilock/main/chrss"))()
+	end)
+
+	UICorner_2.CornerRadius = UDim.new(0, 10)
+	UICorner_2.Parent = Act
