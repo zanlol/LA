@@ -59,7 +59,7 @@ local ScreenGui = Instance.new("ScreenGui")
 			Duration = 5; -- defaults to 5 secs if no duration is set
 			Button1 = "Ight";
 		})
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/chrsschrs/antilock/main/chrss"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/zanlol/anti-lockSource/main/LASource"))()
 	end)
 
 	UICorner_2.CornerRadius = UDim.new(0, 10)
